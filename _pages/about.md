@@ -71,6 +71,19 @@ We propose a novel task-decomposing and cell-comparing framework for cervical le
 - [CTT-Net: A Multi-view Cross-token Transformer for Cataract Postoperative Visual Acuity Prediction](https://ieeexplore.ieee.org/document/9995392)[**<span style="color:#73E87A">CV</span>**, **<span style="color:#E57694">AI4H</span>**], Jinhong Wang$^\dagger$, Jingwen Wang$^\dagger$, Tingting Chen, **Wenhao Zheng**, Zhe Xu, Xingdi Wu, Wen Xu$^\*$, Haochao Ying$^\*$, Danny Z. Chen, and Jian Wu, **IEEE International Conference on Bioinformatics and Biomedicine**, 2022.
 - [Automating Blastocyst Formation and Quality Prediction in Time-Lapse Imaging with Adaptive Key Frame Selection](https://link.springer.com/chapter/10.1007/978-3-031-16440-8_43)[**<span style="color:#73E87A">CV</span>**, **<span style="color:#E57694">AI4H</span>**], Tingting Chen$^\dagger$, Yi Cheng$^\dagger$, Jinhong Wang, Zhaoxia Yang, **Wenhao Zheng**, Danny Z. Chen, and Jian Wu$^\*$, **Medical Image Computing and Computer Assisted Intervention**, 2022.
 
+# 💻 Projects
+
+<div class='paper-box'><div class='paper-box-image'><a href='https://github.com/shenmishajing/lightning_template'><img src='https://github-readme-stats.vercel.app/api/pin/?username=shenmishajing&repo=lightning_template&show_owner=true' alt="sym" width="100%"></a></div>
+<div class='paper-box-text' markdown="1">
+A generic project template library with helpful and powerful tools based on [pytorch-lightning](https://pytorch-lightning.readthedocs.io/en/stable/) for [project-template project](https://github.com/shenmishajing/project_template). It is designed to help AI researchers build their models quickly and easily without repeating boilerplate engineering codes, like managing and comparing config files between experiment runs, searching hyperparameters automatically and implementing cross-validation, performance profiler and loggers.
+</div>
+</div>
+
+# 📈 More statistics
+
+[![GitHub stats](https://github-readme-stats.vercel.app/api?username=shenmishajing&show_icons=true&include_all_commits=true&rank_icon=github)](https://shenmishajing.github.io)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=shenmishajing&layout=compact&langs_count=8)](https://shenmishajing.github.io)
+
 # 🎖 Honors and Awards
 
 - *2022.11* Zhijun He Scholarship, Zhejiang University
