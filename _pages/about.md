@@ -79,10 +79,10 @@ A generic project template library with helpful and powerful tools based on [pyt
 </div>
 </div>
 
-# 📈 More statistics
+## 📈 More statistics
 
-[![GitHub stats](https://github-readme-stats.vercel.app/api?username=shenmishajing&show_icons=true&include_all_commits=true&rank_icon=github)](https://shenmishajing.github.io)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=shenmishajing&layout=compact&langs_count=8)](https://shenmishajing.github.io)
+[![](https://github-readme-stats.vercel.app/api?username=shenmishajing&show_icons=true&include_all_commits=true&rank_icon=github)](https://github.com/shenmishajing)
+[![](https://github-readme-stats.vercel.app/api/top-langs/?username=shenmishajing&layout=compact&langs_count=8)](https://github.com/shenmishajing)
 
 # 🎖 Honors and Awards
 
