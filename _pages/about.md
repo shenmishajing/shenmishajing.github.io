@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-My name is Wenhao Zheng (郑文浩) and I am currently a master's student in the Computer Science department at Zhejiang University, supervised by [Prof. Jian Wu](https://person.zju.edu.cn/0004274). Before that, I graduated with a B.E. degree in Computer Science and Technology from Chu Kochen Honors College at Zhejiang University.
+My name is Wenhao Zheng (郑文浩). I am currently a PhD student at The University of North Carolina at Chapel Hill majoring in Computer Science, supervised by Prof. [Huaxiu Yao](https://www.huaxiuyao.io/). Before that, I graduated as a master's student in the Computer Science department at Zhejiang University, supervised by Prof. [Jian Wu](https://person.zju.edu.cn/0004274) in 2024 and graduated with a B.E. degree in Computer Science and Technology from Chu Kochen Honors College at Zhejiang University in 2021.
 
 My current research interest primarily includes **<span style="color:#73E87A">Computer Vision (CV)</span>**, **<span style="color:#76AFE5">Natural Language Processing (NLP)</span>** based on LLMs and **<span style="color:#76E5D2">Multi-Modal Learning (MML)</span>** involving Vision and Language modalities, especially for **<span style="color:#E57694">Healthcare (AI4H)</span>**. Specifically, I have published several papers <a href='https://scholar.google.com/citations?user=dR1J_4EAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a> on the following topics:
 
@@ -37,6 +37,7 @@ In my spare time, I also enjoy writing some helpful and interesting tools for re
 
 # 🔥 News
 
+- *2024.02*: 🎉 One [paper](https://arxiv.org/abs/2402.06512) was released on arXiv. 
 - *2023.12*: 🎉 One [paper](https://ieeexplore.ieee.org/document/10354298) was accepted by JBHI. 
 - *2023.10*: 🎉 One [paper](https://ieeexplore.ieee.org/document/10294274) was accepted by TMI. 
 - *2023.01*: 🔥 A helpful [library](https://github.com/shenmishajing/lightning_template) with a collection of tools wrapped on [pytorch-lightning](https://github.com/Lightning-AI/pytorch-lightning) was released. 
