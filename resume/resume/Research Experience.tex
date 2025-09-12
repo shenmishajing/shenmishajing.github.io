@@ -1,0 +1,161 @@
+\clearpage
+\cvsection{Research Experience}
+
+\begin{cventries}
+
+	\cventry
+	{} % Empty position
+	{Infinite Agentic Benchmark \& Agent Scaling Laws} % Project
+	{UNC - CH} % Location
+	{May 2025 - Now} % Date
+	{
+		\begin{cvitems} % Description(s) bullet points
+			\item Motivated by the performance degradation of both single and multi-agent systems over long-term interactions, this project addresses the limitations of existing benchmarks, which often rely on human-crafted tasks requiring only a few, fixed-sequence tool invocations.
+			\item Proposed and developed a novel framework to programmatically generate benchmarks of arbitrary length and complexity by constructing rule-based, tool-use dependency trees, enabling a more rigorous evaluation of agent capabilities in extended interaction scenarios.
+			\item The generated benchmarks cover a diverse set of tasks, including document retrieval, image reasoning, and code analysis, to ensure comprehensive assessment.
+			\item Investigated the scaling laws that govern agent performance as a function of interaction count, analyzing how these laws shift under varying per-interaction task difficulties.
+			% \item Led the conceptualization of the benchmark, implemented the generation framework, and conducted extensive experiments to establish new scaling principles for agentic systems.
+		\end{cvitems}
+		% \vspace{2mm}
+	}
+
+	\cventry
+	{} % Empty position
+	{Towards General Agentic Systems: From Verifiable to Unverifiable Domains} % Project
+	{UNC - CH} % Location
+	{Mar. 2025 - Now} % Date
+	{
+		\begin{cvitems} % Description(s) bullet points
+			\item While Reinforcement Learning (RL) has successfully trained multi-turn agents in domains with verifiable rewards (e.g., mathematics, code generation), its application is severely limited in domains where such clear reward signals are unavailable. To bridge this gap, this project proposes a novel framework that learns a reward model from verifiable domains to guide agent training in unverifiable ones.
+			\item First, an agent model is trained using RL to act as an expert judge on tasks with verifiable ground truth. This "agent-judge" learns to effectively assess the quality and correctness of complex outputs. Subsequently, this trained agent-judge is utilized to generate reward signals for new, unverifiable tasks, enabling the extension of powerful RL-based agent training to a broader range of applications.
+			\item The framework incorporates an iterative refinement loop, where the agent-judge is continually updated alongside the distributions of verifiable and unverifiable tasks to progressively enhance system performance.
+			% \item Proposed the core methodology, designed the two-stage training pipeline, and am leading the experimental validation on using a learned judge for reward signaling.
+		\end{cvitems}
+		% \vspace{2mm}
+	}
+
+	% \cventry
+	% {} % Empty position
+	% {Cloud-Edge Collaborative Inference for Efficient LLM Deployment} % Project
+	% {UNC - CH} % Empty location
+	% {Nov. 2024 - Now} % Date
+	% {
+	% 	\begin{cvitems} % Description(s) bullet points
+	% 		\item Motivated by the challenge of deploying large language models (LLMs) on resource-constrained edge devices, this project seeks to enable seamless collaboration between cloud-hosted LLMs and smaller models deployed on edge devices (e.g., smartphones, smartwatches).
+	% 		\item Compared to previous methods that require frequent communication by uploading hidden states, or speculative decoding approaches that suffer from high interaction frequency and latency, this method significantly reduces communication overhead and latency.
+	% 		% \item Designed and led the implementation of a novel framework where edge devices perform initial inference locally, and a lightweight communication protocol selectively queries the cloud-hosted LLM for complex tokens, optimizing the inference process.
+	% 		\item Achieved reduced latency and communication costs while maintaining competitive performance, demonstrating superiority over state-of-the-art baselines in both efficiency and accuracy.
+	% 		\item Led the entire project, proposed the method, developed the system, and conducted extensive experiments and benchmarking.
+	% 	\end{cvitems}
+	% 	% \vspace{2mm}
+	% }
+
+	% \cventry
+	% {} % Empty position
+	% {Collaborative Inference with Token-Level Routing for Accelerated LLM Inference} % Project
+	% {UNC - CH} % Empty location
+	% {Sep. 2024 - Jul. 2025} % Empty date
+	% {
+	% 	\begin{cvitems} % Description(s) bullet points
+	% 		\item While complex queries often necessitate large language models (LLMs), many tokens within these queries are simple enough to be handled by smaller models. Conversely, even in responses to simple queries, certain critical tokens may exceed the capabilities of the smaller model.
+	% 		\item Unlike previous query-level routing methods, which inefficiently route entire queries to either a large or small model, this project develops a token-level router to optimize model collaboration.
+	% 		\item Design a framework where a small model generates tokens and an additional token-level router is employed to score each token to decide whether the LLM should regenerate it.
+	% 		\item Achieve comparable performance while routing only ~30\% of tokens to the LLM. Achieve significant speedups at equivalent performance and performance gains at similar computational costs compared to baselines.
+	% 		\item Lead the design and implementation of the token-level router, conduct experiments, and benchmark the approach against Sota baselines.
+	% 	\end{cvitems}
+	% 	\vspace{2mm}
+	% }
+
+	% \cventry
+	% {} % Empty position
+	% {Protein Cryo-EM Foundation model} % Project
+	% {UNC - CH} % Empty location
+	% {Oct. 2024 - Feb. 2025} % Empty date
+	% {
+	% 	\begin{cvitems} % Description(s) bullet points
+	% 		\item This project focuses on leveraging 3D protein structures obtained through cryo-electron microscopy (cryo-EM) to pretrain a foundation model.
+	%            \item  By understanding and encoding critical patterns and relationships inherent in protein structures, the pretrained model aims to significantly improve performance in downstream biological tasks, such as protein function prediction or drug design.
+	%            \item This work holds promise for advancing our understanding of protein mechanisms and enabling researchers to uncover new insights into complex biological processes, ultimately contributing to a deeper understanding of life sciences and the development of novel therapeutic approaches.
+	% 	\end{cvitems}
+	% 	\vspace{2mm}
+	% }
+
+	% \cventry
+	% {} % Empty position
+	% {Gene expression level prediction} % Project
+	% {UNC - CH} % Empty location
+	% {Sep. 2024 - Dec. 2024} % Empty date
+	% {
+	% 	\begin{cvitems} % Description(s) bullet points
+	% 		\item This project aimed to bridge the gap in understanding the relationship between DNA sequences and their expression levels by leveraging genotype data and gene expression profiles to train a predictive model.
+	%            \item By focusing on DNA sequences surrounding specific genes, the project provided insights into how genetic variations influence gene expression. This task holds significant implications for advancing biological research and practical applications.
+	%            \item By enabling more accurate predictions of gene expression, this work paves the way for advancements in genetic engineering, drug discovery, and understanding complex traits. It also deepens our knowledge of how genetic information translates into biological function, ultimately contributing to a more comprehensive understanding of human DNA and its role in health and disease.
+	% 	\end{cvitems}
+	% 	\vspace{2mm}
+	% }
+
+	% \cventry
+	% {} % Empty position
+	% {Super enhancer triplet prediction} % Project
+	% {UNC - CH} % Empty location
+	% {Aug. 2024 - Oct. 2024} % Empty date
+	% {
+	% 	\begin{cvitems} % Description(s) bullet points
+	% 		\item This project focuses on predicting the likelihood of a triplet of enhancers forming a super enhancer by leveraging DNA sequence data surrounding each enhancer and the probabilistic interactions among them. Super enhancers are critical genomic elements that drive the expression of genes associated with cell identity and disease. By accurately identifying super enhancer triplets, this work contributes significantly to advancing biological research and understanding.
+	%            \item The ability to predict super enhancer triplets can greatly enhance tasks such as gene regulation analysis, enabling researchers to identify key regulatory elements controlling gene expression in specific conditions. This has profound implications for understanding cell differentiation and the mechanisms underlying diseases such as cancer, where super enhancers often play a pivotal role in driving oncogene expression.
+	%            \item It also contributes to expanding our knowledge of the non-coding genome, shedding light on how DNA sequences contribute to higher-order genomic structures and their regulatory functions. This understanding not only deepens our grasp of DNA’s role beyond protein coding but also facilitates advancements in precision medicine by identifying novel biomarkers specific to individual genetic backgrounds.
+	%            \item By addressing these critical tasks, this work provides a valuable tool for researchers aiming to unlock the complexities of genome regulation and improve human health outcomes.
+	% 	\end{cvitems}
+	% 	\vspace{2mm}
+	% }
+
+	% \cventry
+	% {} % Empty position
+	% {Cervical Lesion Cell Detection} % Project
+	% {Zhejiang University} % Empty location
+	% {Oct. 2020 - Mar. 2022} % Empty date
+	% {
+	% 	\quad The automatic detection of cervical lesion cells or cell clumps in cervical cytology images plays a crucial role in facilitating efficient cervical cancer screening. Nevertheless, accurately recognizing lesion cells faces challenges due to significant variations in appearance between single cells and cell clumps of the same lesion type and the visual similarity problem among specific abnormal cells, particularly those in adjacent differentiated stages. \newline
+	% 	My main contributions are as follows: \newline
+	% 	\vspace{4mm}
+	% 	\begin{cvitems} % Description(s) bullet points
+	% 		\item{Proposed a novel framework for cervical lesion cell detection that involves task decomposition and cell comparison.}
+	% 		\item{Decomposed the original detection task into two detection subtasks, which encouraged the network to focus on specific cell structures.}
+	% 		\item{Proposed the cell comparison utilizing normal cells as references to compare various types of abnormal cells.}
+	% 		\item{By adopting this framework, the model can learn more effective and informative lesion cell features.}
+	% 	\end{cvitems}
+	% 	\vspace{2mm}
+	% }
+
+	% \cventry
+	% {} % Empty position
+	% {The 12$^\text{th}$ World Robotics Sailing Championship (WRSC), 1$^\text{st}$ place} % Project
+	% {Zhejiang University} % Empty location
+	% {Oct. 2018 - Aug. 2019} % Empty date
+	% {
+	% 	\quad The goal is to design an autonomous sailing robot that can complete the specified tasks. I'm the leader of the software team, and responsible for the development of the decision system and vision system. Our code is avilible at \href{https://github.com/ZMART-Sailing/sailing_robot}{\textcolor{link}{[here]}}.\newline
+	% 	My main contributions are as follows: \newline
+	% 	\vspace{4mm}
+	% 	\begin{cvitems} % Description(s) bullet points
+	% 		\item{Developed a rule-based decision system with a path planning module and an obstacle avoidance module. It outputs the desired rudder angle and sail angle of the boat based on the position information and the wind information.}
+	% 		\item{Developed a vision system with obstacle detection and QR-code scanning modules deployed on Nvidia Jetson Nano.}
+	% 	\end{cvitems}
+	% 	\vspace{2mm}
+	% }
+
+	% \cventry
+	% {} % Empty position
+	% {Contributions to Open Source Projects} % Project
+	% {} % Empty location
+	% {} % Empty date
+	% {
+	% 	\begin{cvitems} % Description(s) bullet points
+	% 		% I have the ability to dig into the source code of a large project.
+	% 		\item{I have the skill to explore and analyze the source code of large projects. For examples, I contributed to \href{https://github.com/Lightning-AI/lightning}{\textcolor{link}{Pytorch-lightning}}, mmrepos including \href{https://github.com/open-mmlab/mmdetection}{\textcolor{link}{mmdetection}}, \href{https://github.com/open-mmlab/mmengine}{\textcolor{link}{mmengine}} and \href{https://github.com/open-mmlab/mmcv}{\textcolor{link}{mmcv}}, and so on.}
+	% 		\item{I have developed a boilerplate project called \href{https://github.com/shenmishajing/project_template}{\textcolor{link}{project\_template}}, which is built on PyTorch Lightning. This project incorporates a wide range of common engineering features, such as config file inheritance, cross-validation, hyperparameter tuning via wandb, and all other features provided by PyTorch Lightning. By utilizing this project, we can concentrate on model implementation without being burdened by the intricacies of engineering details.}
+	% 		Some examples: \href{https://github.com/shenmishajing/mmdet_lightning}{\textcolor{link}{mmdet\_lightning}}, \href{https://github.com/shenmishajing/mmpretrain_lightning}{\textcolor{link}{mmpretrain\_lightning}} and \href{https://github.com/shenmishajing/detectron2_lightning}{\textcolor{link}{detectron2\_lightning}}.
+	% 		\item{Other repos include a \href{https://github.com/shenmishajing/pytorch_extension_example}{\textcolor{link}{tutorial}} and template project of cuda, a \href{https://github.com/wuzehua/Compiler}{\textcolor{link}{compiler}} based on LLVM that supports a subset syntax of the C language, a \href{https://github.com/shenmishajing/minisql}{\textcolor{link}{databest}} supported the sql language, an \href{https://github.com/wuzehua/MiniTikTok}{\textcolor{link}{andorid application}} like TikTok, and so on.}
+	% 	\end{cvitems}
+	% }
+
+\end{cventries}

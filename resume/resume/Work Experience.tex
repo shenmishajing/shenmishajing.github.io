@@ -1,0 +1,53 @@
+\cvsection{Work Experience}
+
+\begin{cventries}
+	\cventry
+	{} % Empty position
+	{GRIPS Agent: General Purpose Fine-tuned LLM for Scam Prevention
+Use-cases with Lifecycle Management Agent} % Project
+	{Amazon} % Empty location
+	{May. 2025 - Aug. 2025} % Empty date
+	{
+		\begin{cvitems} % Description(s) bullet points
+            \item Design a three-stage pipeline, including continued pretraining, supervised instruction fine-tuning, and quantization, for the LLM fine-tuning.
+		\item Collect the IPS domain data for unsupervised continued pretraining and conduct the continued pretraining.
+            \item Leverage the LoRA techniques and unified format prompt to conduct multi-task instruction fine-tuning.
+            \item Quantized our model before developing it to further accelerate the inference process.
+            \item Outperforms in-production baselines on most use-cases with only ~0.67\% inference cost.
+            \item Design an automatic agent to refresh our grips model automatically, reducing over 150 hours human work per week with similar performance or achieve up to 57.40\% performance gain over time compared to no refresh baselines all with no human work required.
+		\end{cvitems}
+		\vspace{2mm}
+	}
+
+	\cventry
+	{} % Empty position
+	{1B Model Pretraining} % Project
+	{LLM360} % Empty location
+	{Oct. 2024 - Feb. 2025} % Empty date
+	{
+		\begin{cvitems} % Description(s) bullet points
+		\item Design the pretraining of a 1B parameter language model using Megatron-LM on the TxT360 dataset.
+            \item Conduct experiments to determine optimal training configurations and debug issues to ensure stable training performance.
+            \item Apply scaling laws to estimate the required token count for effective pretraining and utilize a smaller model to filter and curate the dataset, enhancing its quality and relevance.
+            \item This project contributes to advancing the understanding of large-scale model training workflows and dataset preparation strategies for efficient and scalable machine learning development.
+		\end{cvitems}
+		\vspace{2mm}
+	}
+    
+        % \cventry
+        % {} % Empty position
+        % {Collaborative Reasoning Inference: Learning from SLM's Mistakes} % Project
+        % {Amazon} % Empty location
+        % {Jan. 2025 - Now.} % Date
+        % {
+        %     \begin{cvitems} % Description(s) bullet points
+        %         \item Motivated by the observation that smaller language models (SLMs) are more prone to errors during reasoning steps compared to large language models (LLMs), this project explores leveraging SLM mistakes as a way to improve LLM reasoning performance.
+        %         \item Developed a collaborative reasoning framework where the SLM performs reasoning on individual steps. The LLM evaluates these steps for correctness and uses identified mistakes to eliminate incorrect reasoning paths, enhancing its own reasoning process.
+        %         \item Demonstrated that this approach not only reduces the computational cost by offloading simpler reasoning tasks to the SLM but also improves LLM reasoning accuracy by systematically learning from SLM errors.
+        %         \item Achieved significant improvements in reasoning benchmarks compared to baseline methods, showing both efficiency and accuracy gains.
+        %         \item Led the project, conceptualized the approach, implemented the framework, and conducted thorough evaluations to benchmark performance against state-of-the-art methods.
+        %     \end{cvitems}
+        %     \vspace{2mm}
+        % }
+        
+\end{cventries}
