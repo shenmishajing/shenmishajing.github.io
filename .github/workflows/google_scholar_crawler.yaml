@@ -14,20 +14,48 @@ jobs:
       - name: Install Reqs
         run: |
           sudo apt-get install python3-setuptools
-      - name: Run
+      - name: Run Google Scholar Crawler
         run: |
           cd ./google_scholar_crawler
+          echo "Setting up Python environment..."
           python3 -m venv .venv
           source .venv/bin/activate
+          echo "Installing requirements..."
           pip install -r requirements.txt
-          python main.py
-          cd ./results
+          echo "Starting Google Scholar data collection with timeout protection..."
+          python main.py || echo "⚠️ Google Scholar crawler finished with warnings/errors, but continuing workflow..."
+          echo "Google Scholar crawler step completed"
+        env:
+          GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+          SCHOLAR_TIMEOUT: ${{ secrets.SCHOLAR_TIMEOUT }}
+
+      - name: Commit and Push Results
+        run: |
+          cd ./google_scholar_crawler/results
+
+          # Check if results exist
+          if [ ! -f "gs_data.json" ]; then
+            echo "⚠️ WARNING: gs_data.json was not created"
+            echo "This usually means Google Scholar crawling failed"
+            echo "The workflow will continue but citation data may not be updated"
+            echo "Please check the previous step logs for error details"
+            exit 0  # Exit successfully to prevent workflow failure
+          fi
+
+          # Check if it's a placeholder file (indicating failure)
+          if grep -q '"error".*"Failed to scrape"' gs_data.json; then
+            echo "⚠️ WARNING: Placeholder data detected - Google Scholar scraping failed"
+            echo "Citation data was not updated due to scraping failure"
+            echo "Please check your GOOGLE_SCHOLAR_ID and SCHOLAR_TIMEOUT secrets"
+            exit 0  # Exit successfully to prevent workflow failure
+          fi
+
+          echo "✅ Valid Google Scholar data found, committing to repository..."
           git init
           git config --local user.name "${GITHUB_ACTOR}"
           git config --local user.email shenmishajing@gmail.com
           export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
           git add *.json
-          git commit -m "Updated Citation Data"
+          git commit -m "Updated Citation Data [$(date '+%Y-%m-%d %H:%M:%S UTC')]"
           git push "${remote_repo}" HEAD:google-scholar-stats --force
-        env:
-          GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+          echo "✅ Citation data updated successfully!"

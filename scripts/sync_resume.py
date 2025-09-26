@@ -212,8 +212,8 @@ def convert_latex_to_markdown(latex_text):
     # Convert textbf to markdown bold
     text = re.sub(r"\\textbf\{([^}]+)\}", r"**\1**", text)
 
-    # Convert textit to markdown italic for conference names
-    text = re.sub(r"\\textit\{([^}]+)\}", r"*\1*", text)
+    # Convert textit to markdown italic for conference names using underscores
+    text = re.sub(r"\\textit\{([^}]+)\}", r"_\1_", text)
 
     # Convert href to markdown links
     text = re.sub(
