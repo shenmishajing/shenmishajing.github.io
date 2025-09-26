@@ -35,62 +35,60 @@ In addition, I am also interested in the following topics:
 
 In my spare time, I also enjoy writing some helpful and interesting tools for research and daily life. You can find them on my [GitHub](https://github.com/shenmishajing).
 
-# 🔥 News
+<!-- # 🔥 News
 
 - *2024.02*: 🎉 One [paper](https://arxiv.org/abs/2402.06512) was released on arXiv. 
 - *2023.12*: 🎉 One [paper](https://ieeexplore.ieee.org/document/10354298) was accepted by JBHI. 
 - *2023.10*: 🎉 One [paper](https://ieeexplore.ieee.org/document/10294274) was accepted by TMI. 
 - *2023.01*: 🔥 A helpful [library](https://github.com/shenmishajing/lightning_template) with a collection of tools wrapped on [pytorch-lightning](https://github.com/Lightning-AI/pytorch-lightning) was released. 
 - *2022.05*: 🎉 One [paper](https://ieeexplore.ieee.org/document/9784879) was accepted by TCBB. 
-- *2022.03*: 🎉 One [paper](https://ieeexplore.ieee.org/document/9744114) was accepted by TMI. 
+- *2022.03*: 🎉 One [paper](https://ieeexplore.ieee.org/document/9744114) was accepted by TMI.  -->
 
-# 📝 Publications 
+# 📖 Educations
 
-<span style="color:blue">($\dagger$: Equal contribution; $^\*$: Corresponding author(s))</span>
+<!-- AUTO_EDUCATION_START -->
+- *Sep. 2024 - May. 2029$^*$*, PhD. of Computer Science, Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill
+- *Sep. 2021 - Jun. 2024*, Master of Software Engineering, College of Computer Science and Technology, Zhejiang University, Hangzhou
+- *Sep. 2017 - Jun. 2021*, Bachelor of Computer Science, Chu Kochen Honors College, Zhejiang University, Hangzhou
+<!-- AUTO_EDUCATION_END -->
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">JBHI</div><img src='images/papers/2023jbhi_segment_by_rotate_detection.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-It is the first work to propose a bespoke approach, called PAL, for instance segmentation of convex objects, leveraging the convex shapes of biomedical targets to generate the profile (i.e., masks) with bounding boxes. PAL outperforms other box-supervised models (e.g., BoxInst), and achieves comparable performance with mask-supervised models including Mask R-CNN and Cascade Mask R-CNN, on convex object instance segmentation tasks. In addition, we show that PAL demonstrates promising performance even for non-convex objects in practical applications.
-</div>
-<div markdown="1">
-[Polygonal Approximation Learning for Convex Object Segmentation in Biomedical Images with Bounding Box Supervision](https://ieeexplore.ieee.org/document/10354298)[**<span style="color:#73E87A">CV</span>**, **<span style="color:#E57694">AI4H</span>**], **Wenhao Zheng**, Jintai Chen, Kai Zhang, Jiahuan Yan, Jinhong Wang, Yi Cheng, Bang Du, Danny Z. Chen, Honghao Gao$^\*$, Jian Wu, Hongxia Xu$^\*$, **IEEE Journal of Biomedical and Health Informatics**, 2023.
-</div>
-</div>
+# 📝 Selected Publications (Full list on [Google Scholar](https://scholar.google.com/citations?user=dR1J_4EAAAAJ))
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TMI</div><img src='images/papers/2022TMI_task_decomposing_cell_comparing_for_cervical_lesion_cell_detection.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-We propose a novel task-decomposing and cell-comparing framework for cervical lesion cell detection. The original detection task is decomposed into two detection subtasks first and a decompose-and-integrate head is introduced to model those tasks encouraging the network to focus on specific cell structures. In addition, cell comparison is performed by introducing a dynamic comparing module and an instance contrastive loss for both normal-abnormal and abnormal-abnormal cells comparison, enhancing the ability of the model to distinguish different kinds of lesion cells.
-</div>
-<div markdown="1">
-[A Task Decomposing and Cell Comparing Method for Cervical Lesion Cell Detection](https://ieeexplore.ieee.org/document/9744114)[**<span style="color:#73E87A">CV</span>**, **<span style="color:#76E5D2">MML</span>**, **<span style="color:#E57694">AI4H</span>**], Tingting Chen$^\dagger$, **Wenhao Zheng$^\dagger$**, Haochao Ying, Xiangyu Tan, Kexin Li, Xiaoping Li, Danny Z. Chen, Jian Wu$^\*$, **IEEE Transactions on Medical Imaging**, 2022.
-</div>
-</div>
+<span style="color:blue">($\dagger$: Equal contribution; $^*$: Corresponding author(s))</span>
 
-- [A Transformer-based Knowledge DistillationNetwork for Cortical Cataract Grading](https://ieeexplore.ieee.org/document/10294274)[**<span style="color:#73E87A">CV</span>**, **<span style="color:#E57694">AI4H</span>**], Jinhong Wang$^\dagger$, Zhe Xu$^\dagger$, **Wenhao Zheng$^\dagger$**, Haochao Ying$^\*$, Tingting Chen, Zuozhu Liu, Danny Z. Chen, Ke Yao$^\*$, Jian Wu. **IEEE Transactions on Medical Imaging**, 2023.
-- [Robust Image Ordinal Regression with Controllable Image Generation](https://arxiv.org/abs/2305.04213)[**<span style="color:#73E87A">CV</span>**], Yi Cheng, Haochao Ying$^\*$, Renjun Hu, Jinhong Wang, **Wenhao Zheng**, Xiao Zhang, Danny Z. Chen, Jian Wu, **International Joint Conference on Artificial Intelligence**, 2023.
-- [A Corresponding Region Fusion Framework for Multi-modal Cervical Lesion Detection](https://ieeexplore.ieee.org/document/9784879)[**<span style="color:#73E87A">CV</span>**, **<span style="color:#76E5D2">MML</span>**, **<span style="color:#E57694">AI4H</span>**], Tingting Chen, **Wenhao Zheng**, Heping Hu, Chunhua Luo, Jintai Chen, Chunnv Yuan, Weiguo Lu, Danny Z. Chen, Honghao Gao$^\*$ and Jian Wu$^\*$, **IEEE/ACM Transactions on Computational Biology and Bioinformatics**, 2022.
-- [CTT-Net: A Multi-view Cross-token Transformer for Cataract Postoperative Visual Acuity Prediction](https://ieeexplore.ieee.org/document/9995392)[**<span style="color:#73E87A">CV</span>**, **<span style="color:#E57694">AI4H</span>**], Jinhong Wang$^\dagger$, Jingwen Wang$^\dagger$, Tingting Chen, **Wenhao Zheng**, Zhe Xu, Xingdi Wu, Wen Xu$^\*$, Haochao Ying$^\*$, Danny Z. Chen, and Jian Wu, **IEEE International Conference on Bioinformatics and Biomedicine**, 2022.
-- [Automating Blastocyst Formation and Quality Prediction in Time-Lapse Imaging with Adaptive Key Frame Selection](https://link.springer.com/chapter/10.1007/978-3-031-16440-8_43)[**<span style="color:#73E87A">CV</span>**, **<span style="color:#E57694">AI4H</span>**], Tingting Chen$^\dagger$, Yi Cheng$^\dagger$, Jinhong Wang, Zhaoxia Yang, **Wenhao Zheng**, Danny Z. Chen, and Jian Wu$^\*$, **Medical Image Computing and Computer Assisted Intervention**, 2022.
+<!-- AUTO_PUBLICATIONS_START -->
+- **Wenhao Zheng**, Xinyu Ye, Peng Xia, Fang Wu, Linjie Li, Weitong Zhang, Lijuan Wang, Yejin Choi, Yun Li, Huaxiu Yao^*. ``The Agent's Marathon: Probing the Limits of Endurance in Long-Horizon Tasks,'' *The International Conference on Learning Representations*, 2026, under review.
+- **Wenhao Zheng**, Jianshu She, Weitong Zhang, Yixiao Chen, Leshang Chen, Souvik Kundu, Eric P. Xing, Zhengzhong Liu, Qirong Ho, Hongyi Wang, Yun Li, Huaxiu Yao^*. "CLEAR: A Cost-Aware Routing System for Edge-Cloud Language Model Collaborative Inference," *The International Conference on Learning Representations*, 2026, under review.
+- **Wenhao Zheng^**, Yixiao Chen^, Weitong Zhang, Souvik Kundu, Yun Li, Zhengzhong Liu, Eric P. Xing, Hongyi Wang, Huaxiu Yao^*. "CITER: Collaborative Inference for Efficient Large Language Model Decoding with Token-Level Routing," *Conference on Language Modeling*, 2025. [[Link]](https://openreview.net/forum?id=nqX9UYW9Af)
+- **Wenhao Zheng^**, Liaoyaqi Wang^, Dongsheng Peng, Hongxia Xu, Hongtu Zhu, Tianfan Fu, Huaxiu Yao^*. "LIFTED: Multimodal Clinical Trial Outcome Prediction via Large Language Models and Mixture-of-Experts," *The Conference on Empirical Methods in Natural Language Processing*, 2025. [[Link]](https://openreview.net/forum?id=HS4XgL5JyP)
+- Jianshu She, **Wenhao Zheng**, Zhengzhong Liu, Hongyi Wang, Eric Xing, Huaxiu Yao, Qirong Ho^*. "Token Level Routing Inference System for Edge Devices," *Annual Meeting of the Association for Computational Linguistics*, 2025. [[Link]](https://aclanthology.org/2025.acl-demo.16/)
+- Zhaoyang Wang, Jinqi Jiang, Huichi Zhou, **Wenhao Zheng**, Xuchao Zhang, Chetan Bansal, Huaxiu Yao^*. "Verifiable Format Control for Large Language Model Generations," *Annual Meeting of the Association for Computational Linguistics*, 2025. [[Link]](https://aclanthology.org/2025.findings-naacl.194/)
+- Peng Xia^, Siwei Han^, Shi Qiu^, Yiyang Zhou, Zhaoyang Wang, **Wenhao Zheng**, Zhaorun Chen, Chenhang Cui, Mingyu Ding, Linjie Li, Lijuan Wang, Huaxiu Yao^*, Tingting Chen, Zuozhu Liu, Danny Z. Chen, Ke Yao^*. "MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models," *International Conference on Learning Representations*, 2025. [[Link]](https://openreview.net/forum?id=HnhNRrLPwm) %
+- Yiyang Zhou, Zhaoyang Wang, Tianle Wang, Shangyu Xing, Peng Xia, Bo Li, Kaiyuan Zheng, Zijian Zhang, Zhaorun Chen, **Wenhao Zheng**, Xuchao Zhang, Chetan Bansal, Weitong Zhang, Ying Wei, Mohit Bansal, Huaxiu Yao^*. "AnyPrefer: An Automatic Framework for Preference Data Synthesis," *International Conference on Learning Representations*, 2025. [[Link]](https://openreview.net/forum?id=WpZyPk79Fu) %
+- Tony Lee^, Haoqin Tu^, Chi Heem Wong^, **Wenhao Zheng**, Yiyang Zhou, Yifan Mai, Josselin Somerville Roberts, Michihiro Yasunaga, Huaxiu Yao, Cihang Xie, Percy Liang^*. "VHELM: A Holistic Evaluation of Vision Language Models," *Conference on Neural Information Processing Systems*, 2024. [[Link]](https://crfm.stanford.edu/helm/vhelm/latest/)
+- Peng Xia^, Ming Hu^, Feilong Tang, Wenxue Li, **Wenhao Zheng**, Lie Ju, Peibo Duan, Huaxiu Yao^*, Zongyuan Ge^*. "Generalizing to Unseen Domains in Diabetic Retinopathy with Disentangled Representations," *Medical Image Computing and Computer Assisted Intervention*, 2024. [[Link]](https://link.springer.com/chapter/10.1007/978-3-031-72117-5_40) %
+- Peng Xia, Ze Chen, Juanxi Tian^, Yangrui Gong^, Ruibo Hou, Yue Xu, Zhenbang Wu, Zhiyuan Fan, Yiyang Zhou, Kangyu Zhu, **Wenhao Zheng**, Zhaoyang Wang, Xiao Wang, Xuchao Zhang, Chetan Bansal, Marc Niethammer, Junzhou Huang, Hongtu Zhu, Yun Li, Jimeng Sun, Zongyuan Ge^*, Gang Li, James Zou, Huaxiu Yao^*. "CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models," *Conference on Neural Information Processing Systems*, 2024. [[Link]](https://proceedings.neurips.cc/paper_files/paper/2024/file/fde7f40f8ced5735006810534dc66b33-Paper-Datasets_and_Benchmarks_Track.pdf) %
+- **Wenhao Zheng**, Jintai Chen, Kai Zhang, Jiahuan Yan, Jinhong Wang, Yi Cheng, Bang Du, Danny Z. Chen, Honghao Gao^*, Jian Wu, Hongxia Xu^*. "Polygonal Approximation Learning for Convex Object Segmentation in Biomedical Images with Bounding Box Supervision," *IEEE Journal of Biomedical and Health Informatics*, 2023. [[Link]](https://ieeexplore.ieee.org/document/10354298)
+- Jinhong Wang^, Zhe Xu^, **Wenhao Zheng^**, Haochao Ying^*, Tingting Chen, Zuozhu Liu, Danny Z. Chen, Ke Yao^*, Jian Wu. "A Transformer-based Knowledge DistillationNetwork for Cortical Cataract Grading," *IEEE Transactions on Medical Imaging*, 2023. [[Link]](https://ieeexplore.ieee.org/abstract/document/10294274)
+- Tingting Chen^, **Wenhao Zheng^**, Haochao Ying, Xiangyu Tan, Kexin Li, Xiaoping Li, Danny Z. Chen, Jian Wu^*. "A Task Decomposing and Cell Comparing Method for Cervical Lesion Cell Detection," *IEEE Transactions on Medical Imaging*, 2022. [[Link]](https://ieeexplore.ieee.org/document/9744114)
+- Yi Cheng, Haochao Ying^*, Renjun Hu, Jinhong Wang, **Wenhao Zheng**, Xiao Zhang, Danny Z. Chen, Jian Wu. "Robust Image Ordinal Regression with Controllable Image Generation," *International Joint Conference on Artificial Intelligence*, 2023. [[Link]](https://dl.acm.org/doi/abs/10.24963/ijcai.2023/70)
+- Tingting Chen, **Wenhao Zheng**, Heping Hu, Chunhua Luo, Jintai Chen, Chunnv Yuan, Weiguo Lu, Danny Z. Chen, Honghao Gao^* and Jian Wu^*. "A Corresponding Region Fusion Framework for Multi-modal Cervical Lesion Detection," *IEEE/ACM Transactions on Computational Biology and Bioinformatics*, 2022. [[Link]](https://ieeexplore.ieee.org/document/9784879)
+- Jinhong Wang^, Jingwen Wang^, Tingting Chen, **Wenhao Zheng**, Zhe Xu, Xingdi Wu, Wen Xu^*, Haochao Ying^*, Danny Z. Chen, and Jian Wu. "CTT-Net: A Multi-view Cross-token Transformer for Cataract Postoperative Visual Acuity Prediction," *IEEE International Conference on Bioinformatics and Biomedicine*, 2022. [[Link]](https://ieeexplore.ieee.org/document/9995392)
+- Tingting Chen^, Yi Cheng^, Jinhong Wang, Zhaoxia Yang, **Wenhao Zheng**, Danny Z. Chen, and Jian Wu^*. "Automating Blastocyst Formation and Quality Prediction in Time-Lapse Imaging with Adaptive Key Frame Selection," *Medical Image Computing and Computer Assisted Intervention*, 2022. [[Link]](https://link.springer.com/chapter/10.1007/978-3-031-16440-8_43)
+<!-- AUTO_PUBLICATIONS_END -->
 
-# 💻 Projects
+# 🎖 Honors and Awards
 
-<div class='paper-box'><div class='paper-box-image'><a href='https://github.com/shenmishajing/lightning_template'><img src='https://github-readme-stats.vercel.app/api/pin/?username=shenmishajing&repo=lightning_template&show_owner=true' alt="sym" width="100%"></a></div>
-<div class='paper-box-text' markdown="1">
-A generic project template library with helpful and powerful tools based on [pytorch-lightning](https://pytorch-lightning.readthedocs.io/en/stable/) for [project-template project](https://github.com/shenmishajing/project_template). It is designed to help AI researchers build their models quickly and easily without repeating boilerplate engineering codes, like managing and comparing config files between experiment runs, searching hyperparameters automatically and implementing cross-validation, performance profiler and loggers.
-</div>
-</div>
+<!-- AUTO_AWARDS_START -->
+- *Nov 2022*, **Scholarship**: Zhijun He Scholarship, Zhejiang University
+- *Dec 2022*, **Scholarship**: First Class Academic Excellence Scholarship, Zhejiang University
+- *Oct 2022*, **Honorary Title**: Miyoshi graduate student, Zhejiang University
+- *Oct 2022*, **Honorary Title**: Outstanding graduate student, Zhejiang University
+- *Aug 2019*, **Award**: 1^(st) Prize in The 12^(th) World Robotics Sailing Championship(WRSC), Zhejiang University
+<!-- AUTO_AWARDS_END -->
 
 ## 📈 More statistics
 
 [![](https://github-readme-stats.vercel.app/api?username=shenmishajing&show_icons=true&include_all_commits=true&rank_icon=github)](https://github.com/shenmishajing)
 [![](https://github-readme-stats.vercel.app/api/top-langs/?username=shenmishajing&layout=compact&langs_count=8)](https://github.com/shenmishajing)
 
-# 🎖 Honors and Awards
-
-- *2022.11* Zhijun He Scholarship, Zhejiang University
-- *2022.10* First Class Academic Excellence Scholarship, Zhejiang University
-- *2019.08* 1$^{st}$ Prize in The 12$^{th}$ World Robotics Sailing Championship(WRSC)
-
-# 📖 Educations
-- *2021.09 - now*, M.E. in Software Engineering, College of Computer Science and Technology, Zhejiang University.
-- *2017.09 - 2021.06*, B.E. in Computer Science and Technology, Chu Kochen Honors College, Zhejiang University.

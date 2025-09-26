@@ -1,0 +1,79 @@
+name: Build and Deploy Resume
+
+on:
+  push:
+    paths:
+      - "resume/**"
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-resume:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+          working_directory: resume
+          latexmk_use_xelatex: true
+          extra_fonts: |
+            ./fonts/*
+
+      - name: Create assets directory
+        run: mkdir -p assets
+
+      - name: Copy PDF to assets
+        run: cp resume/resume.pdf assets/resume.pdf
+
+      - name: Commit and push PDF
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/resume.pdf
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            # Pull latest changes before committing to handle potential conflicts
+            git pull --rebase origin main || {
+              echo "Failed to rebase. Attempting merge instead..."
+              git rebase --abort 2>/dev/null || true
+              git pull origin main || {
+                echo "Failed to pull latest changes. Manual intervention may be required."
+                exit 1
+              }
+            }
+            
+            # Re-add files in case the rebase/merge affected them
+            git add assets/resume.pdf
+            
+            # Commit and push with retry mechanism
+            git commit -m "Auto-update resume PDF [skip ci]" || {
+              echo "Commit failed, possibly no changes after merge"
+              exit 0
+            }
+            
+            # Retry push up to 3 times in case of concurrent pushes
+            for i in {1..3}; do
+              if git push; then
+                echo "Successfully pushed changes"
+                break
+              else
+                echo "Push failed (attempt $i/3), pulling latest changes..."
+                git pull --rebase origin main && git push && break
+                if [ $i -eq 3 ]; then
+                  echo "Failed to push after 3 attempts"
+                  exit 1
+                fi
+                sleep 5  # Wait a bit before retrying
+              fi
+            done
+          fi
