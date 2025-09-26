@@ -19,7 +19,20 @@ redirect_from:
 
 My name is Wenhao Zheng (郑文浩). I am currently a PhD student at The University of North Carolina at Chapel Hill majoring in Computer Science, supervised by Prof. [Huaxiu Yao](https://www.huaxiuyao.io/). Before that, I graduated as a master's student in the Computer Science department at Zhejiang University, supervised by Prof. [Jian Wu](https://person.zju.edu.cn/0004274) in 2024 and graduated with a B.E. degree in Computer Science and Technology from Chu Kochen Honors College at Zhejiang University in 2021.
 
-My current research interest primarily includes **<span style="color:#73E87A">Computer Vision (CV)</span>**, **<span style="color:#76AFE5">Natural Language Processing (NLP)</span>** based on LLMs and **<span style="color:#76E5D2">Multi-Modal Learning (MML)</span>** involving Vision and Language modalities, especially for **<span style="color:#E57694">Healthcare (AI4H)</span>**. Specifically, I have published several papers <a href='https://scholar.google.com/citations?user=dR1J_4EAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a> on the following topics:
+My current research interest primarily includes two frontiers of Large Language Models (LLMs): **LLM Agent** and **LLM Inference Acceleration**.
+
+Regarding **LLM Agent**, I focus on exploring and enhancing the capabilities and endurance of agents in long-horizon tasks. My research includes:
+* **Constructing Benchmarks**: To address the limitations of existing benchmarks, which often rely on human-crafted tasks requiring only a few, fixed-sequence tool invocations, we have proposed and developed a novel framework to programmatically generate benchmarks of arbitrary length and complexity. This enables a more rigorous evaluation of agent capabilities in extended interaction scenarios.
+* **Designing and Evaluating Agent Frameworks**: I am also interested in designing agent frameworks that can learn from verifiable domains (e.g., mathematics, code generation) and apply that knowledge to unverifiable ones. This involves training an "agent-judge" to assess the quality of complex outputs and generate reward signals for new, unverifiable tasks.
+* **Enhancing Foundation Models for Agentic Tasks**: Explore how to leverage the data and insights from these benchmarks to improve the reasoning and execution abilities of foundation models, enabling them to handle more complex agent tasks.
+
+In the area of **LLM Inference Acceleration**, my research focuses on co-designing systems and algorithms to boost LLM inference efficiency, especially for multi-turn interactive scenarios like Agents. This includes:
+* **Collaborative Inference between Large and Small Models**: I have designed collaborative inference systems, such as CITER, that use token-level routing to distribute the computational load between edge devices and cloud-based large models, significantly reducing inference cost and latency.
+* **Efficient Attention Operators and Inference Systems**: I'm also working on building more efficient computational operators and inference systems to tackle the challenges posed by multi-turn interactions in Agent-based applications.
+
+Additionally, my research interests also include **Multi-Modal Learning**, **Computer Vision (CV)**, and **AI for Healthcare (AI4H)**. You can find more about my work on my [Google Scholar](https://scholar.google.com/citations?user=dR1J_4EAAAAJ) and [GitHub](https://github.com/shenmishajing).
+
+<!-- My current research interest primarily includes **<span style="color:#73E87A">Computer Vision (CV)</span>**, **<span style="color:#76AFE5">Natural Language Processing (NLP)</span>** based on LLMs and **<span style="color:#76E5D2">Multi-Modal Learning (MML)</span>** involving Vision and Language modalities, especially for **<span style="color:#E57694">Healthcare (AI4H)</span>**. Specifically, I have published several papers <a href='https://scholar.google.com/citations?user=dR1J_4EAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a> on the following topics:
 
 - Tabular data prediction and text classification based on LLM[**<span style="color:#76AFE5">NLP</span>**].
 - Weakly-supervised instance segmentation on medical images[**<span style="color:#73E87A">CV</span>**, **<span style="color:#E57694">AI4H</span>**].
@@ -33,7 +46,7 @@ In addition, I am also interested in the following topics:
 - Physics, physical simulation and physics-guided learning.
 - Any interesting technical topics in computer science, physics and finance I am not familiar with now.
 
-In my spare time, I also enjoy writing some helpful and interesting tools for research and daily life. You can find them on my [GitHub](https://github.com/shenmishajing).
+In my spare time, I also enjoy writing some helpful and interesting tools for research and daily life. You can find them on my [GitHub](https://github.com/shenmishajing). -->
 
 <!-- # 🔥 News
 
