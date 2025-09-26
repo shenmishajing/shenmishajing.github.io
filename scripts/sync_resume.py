@@ -65,6 +65,8 @@ def parse_cvitemize2_section(content):
         if cleaned_item and not cleaned_item.startswith(
             "%"
         ):  # Skip comments and empty items
+            # Remove trailing % symbols and anything after them (LaTeX comments)
+            cleaned_item = re.sub(r"\s*%.*$", "", cleaned_item, flags=re.MULTILINE)
             parsed_items.append(cleaned_item)
 
     return parsed_items
@@ -164,8 +166,8 @@ def convert_latex_to_markdown(latex_text):
     # Convert textbf to markdown bold
     text = re.sub(r"\\textbf\{([^}]+)\}", r"**\1**", text)
 
-    # Convert textit to markdown italic
-    text = re.sub(r"\\textit\{([^}]+)\}", r"*\1*", text)
+    # Convert textit to markdown bold for conference names (not italic as they should be bold in publications)
+    text = re.sub(r"\\textit\{([^}]+)\}", r"**\1**", text)
 
     # Convert href to markdown links
     text = re.sub(
@@ -175,29 +177,41 @@ def convert_latex_to_markdown(latex_text):
     # Convert textcolor to simple text (removing color formatting)
     text = re.sub(r"\\textcolor\{[^}]+\}\{([^}]+)\}", r"\1", text)
 
-    # Handle LaTeX quotes
-    text = re.sub(r"``([^\']+)\'\'", r'"\1"', text)
+    # Handle LaTeX quotes - convert to proper double quotes
+    # Use non-greedy matching and handle quotes that may contain apostrophes
+    text = re.sub(r"``(.*?)\'\'", r'"\1"', text)
 
-    # Handle LaTeX math superscripts
-    text = re.sub(r"\$\^\\text\{([^}]+)\}\$", r"^(\1)", text)
-    text = re.sub(r"\$\^\\text\{([^}]+)\}\$", r"^{\1}", text)
-    text = re.sub(r"\$\^([^$]+)\$", r"^{\1}", text)
+    # Preserve LaTeX math for superscripts (keep $ signs for proper rendering)
+    # Don't convert these - keep them as LaTeX for proper markdown math rendering
+    # text = re.sub(r"\$\^\\text\{([^}]+)\}\$", r"$^\{\\text\{\1\}\}$", text)
+
+    # Handle specific LaTeX math superscripts that need to be preserved
+    text = re.sub(r"\$\^\\text\{([^}]+)\}\$", r"$^\\text{\1}$", text)
+    # Keep other math expressions intact
+    # text = re.sub(r"\$\^([^$]+)\$", r"$^\1$", text)
 
     # Remove LaTeX commands that don't have direct markdown equivalents
     text = re.sub(r"\\vspace\{[^}]+\}", "", text)
     text = re.sub(r"\\qquad\\?", "", text)
-    text = re.sub(r"\\text\{([^}]+)\}", r"\1", text)
+    text = re.sub(r"\\text\{([^}]+)\}", r"\\text{\1}", text)  # Keep \text for math mode
 
-    # Remove remaining LaTeX commands but keep their content if meaningful
-    text = re.sub(r"\\([a-zA-Z]+)\{([^}]*)\}", r"\2", text)
-    text = re.sub(r"\\([a-zA-Z]+)\s*", "", text)  # Remove commands without parameters
+    # Remove remaining LaTeX commands but preserve math expressions
+    # Don't remove content within $ signs
+    parts = re.split(r"(\$[^$]*\$)", text)
+    for i in range(0, len(parts), 2):  # Process non-math parts only
+        # Remove LaTeX commands but keep their content if meaningful
+        parts[i] = re.sub(r"\\([a-zA-Z]+)\{([^}]*)\}", r"\2", parts[i])
+        parts[i] = re.sub(
+            r"\\([a-zA-Z]+)\s*", "", parts[i]
+        )  # Remove commands without parameters
+        # Clean up remaining LaTeX artifacts from non-math parts only
+        parts[i] = parts[i].replace("{", "").replace("}", "")
+
+    text = "".join(parts)
 
     # Clean up whitespace
     text = re.sub(r"\s+", " ", text)
     text = text.strip()
-
-    # Clean up remaining LaTeX artifacts
-    text = text.replace("{", "").replace("}", "")
 
     return text
 
@@ -301,14 +315,8 @@ def generate_awards_markdown(awards_entries):
         if formatted_date:
             line_parts.append(f"*{formatted_date}*")
 
-        # Clean up award type (remove LaTeX formatting)
-        award_clean = award_type.replace("\\textbf{", "").replace("}", "")
-        award_clean = re.sub(r'"([^"]+)"', r"\1", award_clean)  # Remove quotes
-        award_clean = re.sub(
-            r"\\text\{([^}]+)\}", r"\1", award_clean
-        )  # Remove \text commands
-
-        line_parts.append(award_clean)
+        # Award type is already converted by convert_latex_to_markdown
+        line_parts.append(award_type)
 
         if institution:
             line_parts.append(institution)
