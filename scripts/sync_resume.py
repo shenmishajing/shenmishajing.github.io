@@ -74,10 +74,56 @@ def parse_cvitemize2_section(content):
 
 def parse_cventry_section(content):
     """Parse education/experience sections with cventry format"""
-    # Improved pattern that captures multiline content including nested braces
-    # \cventry{position}{title}{location}{date}{description}
-    cventry_pattern = r"\\cventry\s*\{([^}]*)\}[^{]*\{([^}]*)\}[^{]*\{([^}]*)\}[^{]*\{([^}]*)\}[^{]*\{(.*?)\}(?=\s*(?:\\cventry|\\end\{cventries\}|$))"
-    entries = re.findall(cventry_pattern, content, re.DOTALL)
+    # Find all \cventry commands
+    cventry_starts = []
+    for match in re.finditer(r"\\cventry\s*", content):
+        cventry_starts.append(match.end())
+
+    entries = []
+    for start_pos in cventry_starts:
+        # Extract 5 parameters from the cventry command
+        params = []
+        pos = start_pos
+
+        for param_num in range(
+            5
+        ):  # Extract 5 parameters: {position}{title}{location}{date}{description}
+            # Skip whitespace, comments, and other characters until we find opening brace
+            while pos < len(content):
+                if content[pos] == "{":
+                    break
+                elif content[pos] == "%":
+                    # Skip comment line
+                    while pos < len(content) and content[pos] != "\n":
+                        pos += 1
+                elif content[pos] in " \t\n":
+                    pos += 1
+                else:
+                    pos += 1  # Skip other characters
+
+            if pos >= len(content) or content[pos] != "{":
+                break  # No more parameters
+
+            # Extract content between matching braces
+            brace_count = 1
+            start_brace = pos + 1
+            pos += 1
+
+            while pos < len(content) and brace_count > 0:
+                if content[pos] == "{":
+                    brace_count += 1
+                elif content[pos] == "}":
+                    brace_count -= 1
+                pos += 1
+
+            if brace_count == 0:
+                param_content = content[start_brace : pos - 1]
+                params.append(param_content)
+            else:
+                break  # Unmatched braces
+
+        if len(params) == 5:
+            entries.append(tuple(params))
 
     parsed_items = []
     for entry in entries:
@@ -166,8 +212,8 @@ def convert_latex_to_markdown(latex_text):
     # Convert textbf to markdown bold
     text = re.sub(r"\\textbf\{([^}]+)\}", r"**\1**", text)
 
-    # Convert textit to markdown bold for conference names (not italic as they should be bold in publications)
-    text = re.sub(r"\\textit\{([^}]+)\}", r"**\1**", text)
+    # Convert textit to markdown italic for conference names
+    text = re.sub(r"\\textit\{([^}]+)\}", r"*\1*", text)
 
     # Convert href to markdown links
     text = re.sub(
@@ -236,10 +282,10 @@ def generate_education_markdown(education_entries):
         institution = convert_latex_to_markdown(entry["position"])
         # Skip description for education - only show date, degree, institution, location
 
-        # Format: - *date*, title, institution, location (no description)
+        # Format: - date, title, institution, location (no description, no italic date)
         line_parts = []
         if date:
-            line_parts.append(f"*{date}*")
+            line_parts.append(date)
         if title:
             line_parts.append(title)
         if institution:
